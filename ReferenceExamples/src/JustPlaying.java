@@ -7,6 +7,4 @@ public class JustPlaying {
 		
 		System.out.println(array1.equals(array2));
 	}
-	
-	
 }

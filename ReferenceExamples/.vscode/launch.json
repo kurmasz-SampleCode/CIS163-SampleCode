@@ -1,0 +1,63 @@
+{
+  // Use IntelliSense to learn about possible attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - CopyingAndCloning",
+      "request": "launch",
+      "mainClass": "CopyingAndCloning",
+      "projectName": "ReferenceExamples_f69b699a"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)",
+      "request": "launch",
+      "mainClass": "",
+      "args": "Geroge"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch) - Current File",
+      "request": "launch",
+      "mainClass": "${file}"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-ArrayExamples<ReferenceExamples_f69b699a>",
+      "request": "launch",
+      "mainClass": "ArrayExamples",
+      "projectName": "ReferenceExamples_f69b699a"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-JustPlaying<ReferenceExamples_f69b699a>",
+      "request": "launch",
+      "mainClass": "JustPlaying",
+      "projectName": "ReferenceExamples_f69b699a"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-Primitive<ReferenceExamples_f69b699a>",
+      "request": "launch",
+      "mainClass": "Primitive",
+      "projectName": "ReferenceExamples_f69b699a"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-ReferenceExample1<ReferenceExamples_f69b699a>",
+      "request": "launch",
+      "mainClass": "ReferenceExample1",
+      "projectName": "ReferenceExamples_f69b699a"
+    },
+    {
+      "type": "java",
+      "name": "Debug (Launch)-ReferenceReadingExamples<ReferenceExamples_f69b699a>",
+      "request": "launch",
+      "mainClass": "ReferenceReadingExamples",
+      "projectName": "ReferenceExamples_f69b699a"
+    }
+  ]
+}

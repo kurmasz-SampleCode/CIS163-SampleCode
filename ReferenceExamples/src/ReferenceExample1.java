@@ -125,7 +125,7 @@ class ReferenceExample1 {
 	public static void compareStringRefs() {
 		// The same thing applies to strings:
 		String string1 = "Sam"; // new String("I am a string");
-		String string2 = "Sam"; // new String("I am a string");
+		String string2 = "Sam"; //		new String("I am a string");
 
 		if (string1 == string2) {
 			System.out.println("   string1 and string2 are the same object");
@@ -223,7 +223,7 @@ class ReferenceExample1 {
 
 	public static void main(String args[]) {
 
-		final int exampleToRun = 8;
+		final int exampleToRun = 7;
 
 		switch (exampleToRun) {
 			case 1:
@@ -258,10 +258,9 @@ class ReferenceExample1 {
 
 			case 7:
 				System.out.println("Case 7: Comparing String refs using a helper method");
-				String input = "<Remember to pass a command-line parameter>";
-				if (args.length >= 1) {
-					input = args[0];
-				}
+				java.util.Scanner scanner = new java.util.Scanner(System.in);
+				System.out.println("Enter a name");
+				String input = scanner.next();
 				compareStringRefs2(input);
 				break;
 
