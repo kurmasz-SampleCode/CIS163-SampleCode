@@ -32,8 +32,8 @@ public class Primitive {
 
 		// Notice that un-commenting the following two lines is a syntax error:
 		// You can reference a variable that has never been given any value at all.
-		// int tooSoon;
-		// System.out.println("The value of tooSoon is: " + tooSoon);
+		 // int tooSoon;
+		 // System.out.println("The value of tooSoon is: " + tooSoon);
 
 		int q = 10;
 		int r = 9;

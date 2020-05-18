@@ -5,7 +5,7 @@ public class JustPlaying {
 		int[] array1 = {1,2,3,4};
 		int[] array2 = {1,2,3,4};
 		
-		System.out.println(array1.equals(array1));
+		System.out.println(array1.equals(array2));
 	}
 	
 	

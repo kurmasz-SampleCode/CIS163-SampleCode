@@ -137,7 +137,7 @@ class ArrayExamples {
                     + "\t\t    " + int_array2[x]);
         }
 
-        // By changing some elements in int_array2, we're really chainging
+        // By changing some elements in int_array2, we're really changing
         // int_array1.
         for (int x = 0; x < int_array1.length; x += 2) {
             int_array2[x] = x;

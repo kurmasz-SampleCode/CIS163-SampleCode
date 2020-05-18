@@ -85,7 +85,7 @@ class ReferenceExample1 {
 		method2(point1);
 		System.out.println("\nAfter calling method2, the value of point1 is: " + point1 + ".");
 		System.out
-				.println("After calllng method2,  point1 \"refers to\" " + "an object with this data: " + point1.toString2());
+				.println("After calling method2,  point1 \"refers to\" " + "an object with this data: " + point1.toString2());
 	}
 
 	// Demonstrates the difference between == and .equals
@@ -152,13 +152,41 @@ class ReferenceExample1 {
 
 	} // end compareStringRefs
 
-	// Demonstrates use of clone method.
-	public static void cloneObject() {
+	public static boolean isItSam(String name) {
+		return name == "Sam";
+	}
+
+	public static void compareStringRefs2(String externalName) {
+
+		// This works as expected
+		if (isItSam("Fred")) {
+			System.out.println("\t\"Fred\" is \"Sam\".");
+		} else {
+			System.out.println("\t\"Fred\" is not \"Sam\".");
+		}
+
+		// This also works as expected
+		if (isItSam("Sam")) {
+			System.out.println("\t\"Sam\" is \"Sam\".");
+		} else {
+			System.out.println("\t\"Sam\" is not \"Sam\".");
+		}
+
+		// This does *not* work as expected
+		if (isItSam(externalName)) {
+			System.out.printf("\t\"%s\" is \"Sam\".\n", externalName);
+		} else {
+			System.out.printf("\t\"%s\" is not \"Sam\".\n", externalName);
+		}
+	}
+
+	public static void copyObject() {
 		Point2D point1 = new Point2D(3.0, 4.0);
 
-		// Point2 is a "clone" of point1: A separate object with the
-		// same data
-		Point2D point2 = point1.clone();
+		// Point2 is a copy of point1: A separate object with the
+		// same data. (Remember, you are responsible for providing the copy
+		// constructor.)
+		Point2D point2 = new Point2D(point1);
 
 		System.out.println("The value of point1 is: " + point1);
 		System.out.println("The value of point2 is: " + point2);
@@ -195,7 +223,7 @@ class ReferenceExample1 {
 
 	public static void main(String args[]) {
 
-		final int exampleToRun = 3;
+		final int exampleToRun = 8;
 
 		switch (exampleToRun) {
 			case 1:
@@ -215,7 +243,7 @@ class ReferenceExample1 {
 
 			case 4:
 				System.out.println("Case 4: References as parameters.");
-				refsAsParams();
+				refsAsParams2();
 				break;
 
 			case 5:
@@ -226,6 +254,20 @@ class ReferenceExample1 {
 			case 6:
 				System.out.println("Case 6: Comparing String refs");
 				compareStringRefs();
+				break;
+
+			case 7:
+				System.out.println("Case 7: Comparing String refs using a helper method");
+				String input = "<Remember to pass a command-line parameter>";
+				if (args.length >= 1) {
+					input = args[0];
+				}
+				compareStringRefs2(input);
+				break;
+
+			case 8:
+				System.out.println("Case 8: Copying objects.");
+				copyObject();
 				break;
 		}
 	}

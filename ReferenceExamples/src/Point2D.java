@@ -34,6 +34,11 @@ public class Point2D
 		y = y1;
 	}
 
+	// "Copy constructor:" Make a copy of another point:
+	public Point2D(Point2D other) {
+		this(other.getX(), other.getY());
+	}
+
 	public void setX(double pX) 
 	{
 		x = pX;
@@ -74,11 +79,6 @@ public class Point2D
 	public boolean equals(Point2D otherPoint)
 	{
 		return (x == otherPoint.x && y == otherPoint.y);
-	}
-
-	public Point2D clone()
-	{
-		return new Point2D(x, y);
 	}
 
 } // end class Point2D;
