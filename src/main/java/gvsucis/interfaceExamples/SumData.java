@@ -9,11 +9,12 @@ public class SumData {
 
     Scanner s = new Scanner(input);
 
-    int total = 0;
+    double total = 0;
     while (s.hasNextDouble()) {
       total += s.nextDouble();
     }
     output.printf("The total is: %.2f\n", total);
+    s.close();
   }
 
   public static void main(String[] args) {
