@@ -1,3 +1,6 @@
+
+package gvsucis.referenceExamples;
+
 class ReferenceExample1 {
 
 	// Demonstrates that object variables contain references, not objects.

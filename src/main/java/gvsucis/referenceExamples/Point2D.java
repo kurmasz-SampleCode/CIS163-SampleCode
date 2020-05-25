@@ -1,3 +1,6 @@
+
+package gvsucis.referenceExamples;
+
 /*************************************************************************
  * This is just a simple class containing two double values for for
  * the purpose of illustrating how references work.

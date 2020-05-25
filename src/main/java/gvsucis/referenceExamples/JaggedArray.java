@@ -1,3 +1,7 @@
+
+package gvsucis.referenceExamples;
+
+
 /**
  * Created by IntelliJ IDEA.
  * User: kurmasz

@@ -1,3 +1,6 @@
+
+package gvsucis.referenceExamples;
+
 /********************************************************************************
  * This class simply shows that changes to primitive data inside methods do not
  * persist outside the method.

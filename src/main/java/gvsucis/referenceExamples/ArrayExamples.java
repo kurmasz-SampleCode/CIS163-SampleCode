@@ -1,3 +1,6 @@
+
+package gvsucis.referenceExamples;
+
 import java.awt.*;
 // Talk about lab
 //   * useful examples on p393, 396, and 400.
