@@ -9,7 +9,7 @@ public class OneFileCalculator {
   private JLabel op;
   private JTextField answer;
 
-  private void buttonListener(CalculatorModel operator) {
+  private void buttonListener(CalculatorOperations operator) {
     int val1 = Integer.parseInt(num1.getText());
     int val2 = Integer.parseInt(num2.getText());
     op.setText(operator.symbol());
@@ -39,7 +39,7 @@ public class OneFileCalculator {
 
     JPanel bottom = new JPanel();
 
-    for (CalculatorModel m : CalculatorModel.values()) {
+    for (CalculatorOperations m : CalculatorOperations.values()) {
       JButton operator = new JButton(m.label());
       bottom.add(operator);
       operator.addActionListener(e -> buttonListener(m));

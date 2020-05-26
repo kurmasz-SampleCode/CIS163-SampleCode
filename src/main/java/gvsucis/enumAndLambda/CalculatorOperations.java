@@ -4,7 +4,7 @@ import java.util.function.BinaryOperator;
 
 public enum CalculatorOperations {
 
-  Add("Add", "+", (a, b) -> a + b), Subtract("Subtract", "-", (a, b) -> a + b),
+  Add("Add", "+", (a, b) -> a + b), Subtract("Subtract", "-", (a, b) -> a - b),
   Multiply("Multiply", "*", (a, b) -> a * b), Divide("Divide", "/", (a, b) -> a / b);
 
   private String label;
