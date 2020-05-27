@@ -86,6 +86,8 @@ public class OneFileCalculator {
     });
 
     // uses Java 8 lambda
+    // Compiler automatically converts the concise syntax here into
+    // the anonymous inner class above
     divide.addActionListener(e -> {
       int val1 = Integer.parseInt(num1.getText());
       int val2 = Integer.parseInt(num2.getText());
