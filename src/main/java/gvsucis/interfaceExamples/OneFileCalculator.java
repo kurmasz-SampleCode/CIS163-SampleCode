@@ -3,6 +3,10 @@ package gvsucis.interfaceExamples;
 import javax.swing.*;
 import java.awt.event.*;
 
+// This is a simple GUI app stuffed into one .java file.
+// I put all the code here so it was easier to focus on the use of interfaces.
+// This is *NOT* a good overall application design. For real apps, you should use
+// MVC or something similar.
 public class OneFileCalculator {
 
   private JTextField num1;
@@ -88,7 +92,7 @@ public class OneFileCalculator {
     // uses Java 8 lambda
     // Compiler automatically converts the concise syntax here into
     // the anonymous inner class above
-    divide.addActionListener(e -> {
+    divide.addActionListener( e-> {
       int val1 = Integer.parseInt(num1.getText());
       int val2 = Integer.parseInt(num2.getText());
       op.setText("/");

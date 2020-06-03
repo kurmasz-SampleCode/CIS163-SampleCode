@@ -6,4 +6,8 @@ public class Cat implements Animal {
     return "Meow";
   }
   
+  public void meow() {
+    System.out.println("Meow");
+  }
+
 }

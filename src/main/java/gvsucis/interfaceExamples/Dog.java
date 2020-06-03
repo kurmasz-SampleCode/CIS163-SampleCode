@@ -12,4 +12,8 @@ public class Dog implements Animal {
     expectTreat = true;
   }
 
+  public void bark() {
+    System.out.println("Woof");
+  }
+
 }
