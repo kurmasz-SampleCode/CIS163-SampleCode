@@ -25,7 +25,7 @@ public class InvoiceWithCustomException {
     }
   }
 
-  public static void main(String[] args) throws FileNotFoundException {
+  public static void main(String[] args) {
 
     // Pretend the user selects this file using a file chooser.
     String filename = "data/brokenExample.invoices";

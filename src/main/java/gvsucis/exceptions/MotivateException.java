@@ -47,6 +47,7 @@ public class MotivateException {
   public static double getNet(String grossIn, String discountIn) {
     double gross = Double.parseDouble(grossIn);
     double discount = Double.parseDouble(discountIn);
+
     return gross-discount;
   }
   
