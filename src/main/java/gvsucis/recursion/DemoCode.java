@@ -88,7 +88,7 @@ public class DemoCode {
 
   public static void main(String[] args) {
 
-    int[] array = {9, 4, 5, 2};
+    int[] array = {3, 4, 5, 2};
     System.out.printf("max: %d\n", maxValue(array, 0));
 
   }
