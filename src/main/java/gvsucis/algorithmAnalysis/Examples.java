@@ -38,6 +38,7 @@ public class Examples {
     return sum;
   }
 
+  // This algorithm is O(n)
   public static int locationOfMax(int[] array) {
     int locOfMax = 0;
     for (int i = 0; i < array.length; ++i) {
@@ -50,14 +51,15 @@ public class Examples {
 
   public static int fastMode(int[] array) {
 
-    int loc = locationOfMax(array);
+    int loc = locationOfMax(array);  // O(n)
     int maxValue = array[loc];
     int[] count = new int[maxValue + 1];
 
     for (int val : array) {
       count[val]++;
     }
-    return locationOfMax(count);
+
+    return locationOfMax(count); // !! Be careful  count.length != array.length
   }
 
   public static int slowMode(int[] array) {
