@@ -152,21 +152,24 @@ public class Sorts {
 
   public static void main(String[] args) {
 
-    // int[] input = {2, 8, 3, 6, 5, 8, 7, 4, 1, 9, 2, 8, 3};
-    // selectionSort(input);
-    // System.out.println(Arrays.toString(input));
+    /*
+    int[] input = {2, 8, 3, 6, 5, 8, 7, 4, 1, 9, 2, 8, 3};
+    selectionSort(input);
+    System.out.println(Arrays.toString(input));
+    */
 
+    
     Integer[] input2 = { 2, 8, 3, 6, 5, 8, 7, 4, 1, 9, 2, 8, 3 };
-    quickSort(input2);
+    selectionSort(input2);
     System.out.println(Arrays.toString(input2));
 
     String[] input3 = { "James", "Bob", "Fred", "George" };
     selectionSort(input3);
     System.out.println(Arrays.toString(input3));
 
-    Integer[] input4 = { 2, 8, 3, 6, 5, 7, 4, 1, 9 };
-    quickSort(input4);
-    System.out.println(Arrays.toString(input4));
+    //Integer[] input4 = { 2, 8, 3, 6, 5, 7, 4, 1, 9 };
+    //quickSort(input4);
+    //System.out.println(Arrays.toString(input4));
 
   }
 

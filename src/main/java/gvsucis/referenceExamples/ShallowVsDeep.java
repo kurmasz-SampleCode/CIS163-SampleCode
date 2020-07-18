@@ -16,7 +16,7 @@ public class ShallowVsDeep {
 
     for (int i = 0; i < nums.length; ++i) {
       int currentValue = nums[i]; 
-      int occurencesOfThatValue = counts[currentValue];
+      //int occurencesOfThatValue = counts[currentValue];
 
       counts[currentValue] = counts[currentValue] + 1;
 

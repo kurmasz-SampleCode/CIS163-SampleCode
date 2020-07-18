@@ -54,8 +54,7 @@ public class BankExample {
 
     @Override
     public void mystery() {
-      // TODO Auto-generated method stub
-
+      return;
     }
   }
 
@@ -73,8 +72,7 @@ public class BankExample {
 
     @Override
     public void mystery() {
-      // TODO Auto-generated method stub
-
+      return;
     }
 
   }

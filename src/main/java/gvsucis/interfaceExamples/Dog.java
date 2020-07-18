@@ -13,7 +13,11 @@ public class Dog implements Animal {
   }
 
   public void bark() {
-    System.out.println("Woof");
+    if (expectTreat) {
+      System.out.println("Woof");
+    } else {
+      System.out.println("Woof!  Woof!");
+    }
   }
 
 }

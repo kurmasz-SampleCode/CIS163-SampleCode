@@ -56,12 +56,5 @@ public class Primitive {
 		System.out.println("The value of y in main after method 1 is " + y);
 		method2(y);
 		System.out.println("The value of y in main after method 2 is " + y);
-
-		int c = 5;
-		int d = 9;
-		System.out.println("The value of y in main is " + y);
-
-
 	}
-
 }
