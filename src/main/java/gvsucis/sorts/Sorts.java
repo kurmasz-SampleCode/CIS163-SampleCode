@@ -1,10 +1,8 @@
 package gvsucis.sorts;
 
-import java.util.Arrays;
-
 public class Sorts {
 
-  public static void selectionSort(int[] array) {
+  public static void selectionSort(final int[] array) {
     for (int i = 0; i < array.length; ++i) {
       int locMin = i;
       for (int j = i + 1; j < array.length; ++j) {
@@ -13,20 +11,34 @@ public class Sorts {
         }
       }
       if (locMin != i) {
-        int temp = array[locMin];
+        final int temp = array[locMin];
         array[locMin] = array[i];
         array[i] = temp;
       }
     }
   }
 
-  public static <T> void swap(T[] array, int from, int to) {
-    T temp = array[from];
+  public static void runSelectionSort() {
+    final Integer[] input2 = new Integer[60000];
+    for (int i = 0; i < input2.length; ++i) {
+      input2[i] = (int) (Math.random() * input2.length);
+    }
+    selectionSort(input2);
+    for (int i = 0; i < input2.length; ++i) {
+      System.out.print(input2[i] + ", ");
+      if (i % 10 == 9) {
+        System.out.println();
+      }
+    }
+  }
+
+  public static <T> void swap(final T[] array, final int from, final int to) {
+    final T temp = array[from];
     array[from] = array[to];
     array[to] = temp;
   }
 
-  public static <T extends Comparable<T>> void selectionSort(T[] array) {
+  public static <T extends Comparable<T>> void selectionSort(final T[] array) {
     for (int i = 0; i < array.length; ++i) {
       int locMin = i;
       for (int j = i + 1; j < array.length; ++j) {
@@ -38,9 +50,9 @@ public class Sorts {
     }
   }
 
-  public static <T extends Comparable<T>> void insertionSort(T[] array) {
+  public static <T extends Comparable<T>> void insertionSort(final T[] array) {
     for (int i = 1; i < array.length; ++i) {
-      T key = array[i];
+      final T key = array[i];
       int position = i;
       while (position > 0 && key.compareTo(array[position - 1]) < 0) {
         array[position] = array[position - 1];
@@ -51,7 +63,7 @@ public class Sorts {
     }
   }
 
-  public static <T extends Comparable<T>> void bubbleSort(T[] array) {
+  public static <T extends Comparable<T>> void bubbleSort(final T[] array) {
     for (int i = 0; i < array.length; ++i) {
       for (int j = i + 1; j < array.length; ++j) {
         if (array[i].compareTo(array[j]) > 0) {
@@ -62,10 +74,10 @@ public class Sorts {
     }
   }
 
-  public static <T extends Comparable<T>> void merge(T[] array, int start, int mid, int stop) {
+  public static <T extends Comparable<T>> void merge(final T[] array, final int start, final int mid, final int stop) {
 
     @SuppressWarnings("unchecked")
-    T[] temp = (T[]) (new Comparable[array.length]);
+    final T[] temp = (T[]) (new Comparable[array.length]);
 
     int left = start;
     int right = mid + 1;
@@ -94,27 +106,27 @@ public class Sorts {
     }
   }
 
-  public static <T extends Comparable<T>> void mergeSort(T[] array) {
+  public static <T extends Comparable<T>> void mergeSort(final T[] array) {
     mergeSort(array, 0, array.length - 1);
   }
 
-  public static <T extends Comparable<T>> void mergeSort(T[] array, int start, int stop) {
+  public static <T extends Comparable<T>> void mergeSort(final T[] array, final int start, final int stop) {
     if (stop > start) {
-      int mid = (start + stop) / 2;
+      final int mid = (start + stop) / 2;
       mergeSort(array, start, mid);
       mergeSort(array, mid + 1, stop);
       merge(array, start, mid, stop);
     }
   }
 
-  public static <T extends Comparable<T>> int choosePivotLoc(T[] array, int start, int stop) {
+  public static <T extends Comparable<T>> int choosePivotLoc(final T[] array, final int start, final int stop) {
     return (start + stop) / 2;
   }
 
-  public static <T extends Comparable<T>> int partition(T[] array, int start, int stop) {
+  public static <T extends Comparable<T>> int partition(final T[] array, final int start, final int stop) {
 
-    int pivotLoc = choosePivotLoc(array, start, stop);
-    T pivot = array[pivotLoc];
+    final int pivotLoc = choosePivotLoc(array, start, stop);
+    final T pivot = array[pivotLoc];
 
     swap(array, start, pivotLoc);
     int left = start;
@@ -138,19 +150,21 @@ public class Sorts {
     return right;
   }
 
-  public static <T extends Comparable<T>> void quickSort(T[] array) {
+  public static <T extends Comparable<T>> void quickSort(final T[] array) {
     quickSort(array, 0, array.length - 1);
   }
 
-  public static <T extends Comparable<T>> void quickSort(T[] array, int start, int stop) {
+  public static <T extends Comparable<T>> void quickSort(final T[] array, final int start, final int stop) {
     if (stop > start) {
-      int pivotLoc = partition(array, start, stop);
+      final int pivotLoc = partition(array, start, stop);
       quickSort(array, start, pivotLoc - 1);
       quickSort(array, pivotLoc + 1, stop);
     }
   }
 
-  public static void main(String[] args) {
+  public static void main(final String[] args) {
+
+    runSelectionSort();
 
     /*
     int[] input = {2, 8, 3, 6, 5, 8, 7, 4, 1, 9, 2, 8, 3};
@@ -158,7 +172,7 @@ public class Sorts {
     System.out.println(Arrays.toString(input));
     */
 
-    
+    /*
     Integer[] input2 = { 2, 8, 3, 6, 5, 8, 7, 4, 1, 9, 2, 8, 3 };
     selectionSort(input2);
     System.out.println(Arrays.toString(input2));
@@ -166,6 +180,7 @@ public class Sorts {
     String[] input3 = { "James", "Bob", "Fred", "George" };
     selectionSort(input3);
     System.out.println(Arrays.toString(input3));
+    */
 
     //Integer[] input4 = { 2, 8, 3, 6, 5, 7, 4, 1, 9 };
     //quickSort(input4);

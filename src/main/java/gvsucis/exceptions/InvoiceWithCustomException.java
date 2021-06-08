@@ -44,7 +44,7 @@ public class InvoiceWithCustomException {
   }
 
   public static double sumInvoicesFromFile(String fileName) throws FileNotFoundException, InvoiceException {
-    return sumInvoices(new FileInputStream(fileName));
+    return sumInvoices(new FileInputStream(fileName));    
   }
 
   public static double sumInvoices(InputStream input) throws InvoiceException {

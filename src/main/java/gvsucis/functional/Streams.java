@@ -23,7 +23,7 @@ public class Streams {
     System.out.println("odd squares: " + oddSquares);
 
     Person[] people = {new Person("Bob", 41), new Person("James", 27), new Person("Fred", 14), new Person("Tyler", 81), new Person("Andrew", 6)};
-    List<String> adults = Arrays.stream(people).filter((p) -> p.age >= 18).map((p) -> p.name).collect(Collectors.toList());
+    List<String> adults = Arrays.stream(people).parallel().filter((p) -> p.age >= 18).map((p) -> p.name).collect(Collectors.toList());
     System.out.println("The adults: " + adults);
   }
 }

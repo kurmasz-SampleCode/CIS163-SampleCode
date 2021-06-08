@@ -31,6 +31,18 @@ public class Select {
     return answer;
   }
 
+  public static ArrayList<Student> filterByGPA(ArrayList<Student> studentList, double min, double max) {
+    ArrayList<Student> answer = new ArrayList<Student>();
+
+    for (Student s : studentList) {
+      if (s.GPA() >= min && s.GPA() < max) {
+        answer.add(s);
+      }
+    }
+    return answer;
+  }
+
+
   public static ArrayList<Student> filter(ArrayList<Student> studentList, Predicate<Student> function) {
     ArrayList<Student> answer = new ArrayList<Student>();
     for (Student s : studentList) {
@@ -74,7 +86,7 @@ public class Select {
     studentList.add(new Student());
     studentList.add(new Student());
 
-    ArrayList<Student> seniors = filter(studentList, (s) -> s.getCredits() > 120);
+    ArrayList<Student> seniors = filter(studentList, (Student s) -> {return s.getCredits() > 90;});
     ArrayList<Student> honorRoll = filter(studentList, (s) -> s.GPA() >= 3.0);
 
     List<Point> points = new ArrayList<>(

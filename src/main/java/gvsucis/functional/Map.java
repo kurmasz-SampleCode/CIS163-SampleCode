@@ -22,6 +22,7 @@ public class Map {
     List<Point> points = Arrays.asList(new Point(3, 4), new Point(5, 6), new Point(7, 8), new Point(10, 12));
     List<Integer> xOnly = map(points, (p) -> p.x);
     List<Integer> yOnly = map(points, (p) -> p.y);
+    List<Double> distance = map(points, (p) -> Math.sqrt(p.x*p.x - p.y*p.y));
     System.out.println(xOnly);
     System.out.println(yOnly);
   }
